@@ -1,0 +1,1 @@
+This is a placeholder for consularium.js in consularium_module
