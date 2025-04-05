@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rhetorica – Language Test Module</title>
+  <style>
+    body { font-family: Georgia, serif; margin: 2rem; background: #fdfdfd; color: #222; }
+    h1, h2 { color: #2a3d66; }
+    section { margin-bottom: 2rem; padding: 1rem; border-left: 4px solid #ccc; background: #f9f9f9; }
+    label { font-weight: bold; display: block; margin-top: 1rem; }
+    textarea { width: 100%; height: 100px; margin-top: 0.5rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Rhetorica: Interactive Language Test</h1>
+  <p>This is a full simulation of the professional speaking and listening test. You may practice as often as you'd like during this beta period.</p>
+
+  <section>
+    <h2>Part I: Social Conversation (13 minutes)</h2>
+    <p><em>Instructions:</em> Greet the interviewer. Engage in conversation about the weather, local food, and your city. Gradually shift to complex topics like education or civic responsibility.</p>
+    <label for="part1-response">Your Response:</label>
+    <textarea id="part1-response" placeholder="Type or record your conversation..."></textarea>
+  </section>
+
+  <section>
+    <h2>Part II: Topical Q&A (18 minutes)</h2>
+    <p>Select 3 topics from the list and respond to questions based on logistics and opinions.</p>
+    <ul>
+      <li>Public safety at mass gatherings</li>
+      <li>Digital infrastructure and government services</li>
+      <li>Hybrid work models and productivity</li>
+      <li>Freedom of the press in crisis situations</li>
+      <li>Migration and citizenship pathways</li>
+    </ul>
+    <label for="part2-response">Your Responses:</label>
+    <textarea id="part2-response" placeholder="Respond to 3 topics above..."></textarea>
+  </section>
+
+  <section>
+    <h2>Part III: Information Gathering & Reporting (13 minutes)</h2>
+    <p><em>Instructions:</em> Ask the 'tester' 3 questions in the target language. Then, report their answers in English.</p>
+    <label for="part3-response">Your Report:</label>
+    <textarea id="part3-response" placeholder="Summarize both questions and answers..."></textarea>
+  </section>
+
+  <section>
+    <h2>Reflection (Optional)</h2>
+    <label for="reflection">What was difficult? What went well? What do you want to carry forward into tomorrow?</label>
+    <textarea id="reflection"></textarea>
+  </section>
+
+  <footer style="margin-top: 2rem;">
+    <button onclick="alert('Thank you! Your session is complete.')">Submit Reflection</button>
+    <p><a href="index.html">← Back to Home</a></p>
+  </footer>
+</body>
+</html>
