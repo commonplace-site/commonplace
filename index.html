@@ -3,23 +3,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Commonplace Project Portal</title>
+    <title>Commonplace Language Project</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Commonplace</h1>
-    <p>Select a module or resource to begin:</p>
-    <ul>
-        <li><a href="Videos/C_S_ErrorCorrection_Script.txt">C/S Error Correction Demo (Synthesia Script)</a></li>
-        <li><a href="Videos/Consularium_Interview_Script.txt">Consularium Visa Interview (Voiceflow/HeyGen Script)</a></li>
-        <li><a href="Chonger/Vocab_i+1_Example.csv">Chonger i+1 Vocabulary Preview</a></li>
-        <li><a href="Chonger/Shadowing_Model_Notes.txt">Chonger Shadowing System Notes</a></li>
-        <li><a href="IslandTeam/Dossiers_Months1to3.txt">Island Team Dossiers (Months 1–3)</a></li>
-        <li><a href="IslandTeam/Teacher_Preview_Guide.txt">Island Team: Teacher Preview Guide</a></li>
-        <li><a href="Infrastructure/Comment_Box_Template.txt">Infrastructure: Comment Box Template</a></li>
-        <li><a href="Recognition/EOPF_Awards_Summary.txt">Recognition: EOPF Awards Summary</a></li>
-        <li><a href="Reflection/CBAT_Notes.txt">Reflection: CBAT Notes</a></li>
-        <li><a href="Reflection/Adversaria_Template.txt">Reflection: Adversaria Template</a></li>
-    </ul>
-    <p>More modules and visuals coming soon.</p>
+    <header>
+        <h1>Commonplace Project Portal</h1>
+        <p>Preview and access emerging modules from CP, Penrose, and the Language Studio.</p>
+    </header>
+    <main class="grid">
+        <section class="card">
+            <h2>C/S Atlas: Error Correction</h2>
+            <p>Teacher training video and technique breakdown using delayed and student-led correction.</p>
+            <img src="assets/cs_placeholder.png" alt="C/S Video Preview">
+            <a href="modules/C_S_ErrorCorrection_Script.txt">View Script</a>
+        </section>
+        <section class="card">
+            <h2>Consularium Simulation</h2>
+            <p>Visa interview simulation with i+1 branching, language analysis, and scoring logic.</p>
+            <img src="assets/consularium_placeholder.png" alt="Consularium Preview">
+            <a href="modules/Consularium_Interview_Script.txt">View Script</a>
+        </section>
+        <section class="card">
+            <h2>Chonger</h2>
+            <p>i+1 vocabulary progression, shadowing, and diagnostic system scaffold.</p>
+            <a href="modules/Vocab_i+1_Example.csv">Vocabulary Preview</a><br>
+            <a href="modules/Shadowing_Model_Notes.txt">Shadowing System Notes</a>
+        </section>
+        <section class="card">
+            <h2>Island Team</h2>
+            <p>Monthly simulation with dossiers, decision-making, and meeting practice.</p>
+            <a href="modules/Dossiers_Months1to3.txt">View Dossiers</a><br>
+            <a href="modules/Teacher_Preview_Guide.txt">Teacher Notes</a>
+        </section>
+        <section class="card">
+            <h2>Reflection + Recognition</h2>
+            <p>Language from awards, CBAT, and Adversaria. Trajectory, tensions, insight.</p>
+            <a href="modules/EOPF_Awards_Summary.txt">Awards Summary</a><br>
+            <a href="modules/CBAT_Notes.txt">CBAT Notes</a>
+        </section>
+    </main>
+    <footer>
+        <p><a href="#">Codex</a> | <a href="#">Room 127</a></p>
+    </footer>
 </body>
 </html>
