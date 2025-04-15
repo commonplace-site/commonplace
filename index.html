@@ -1,21 +1,143 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Commonplace Developer Deployment</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commonplace Dashboard</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    :root {
+      --bg-light: #ffffff;
+      --text-light: #000000;
+      --bg-dark: #121212;
+      --text-dark: #ffffff;
+    }
+
+    [data-theme="light"] {
+      --bg: var(--bg-light);
+      --text: var(--text-light);
+    }
+
+    [data-theme="dark"] {
+      --bg: var(--bg-dark);
+      --text: var(--text-dark);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+
+    .mode-toggle {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border: 1px solid;
+      border-radius: 8px;
+      background: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
-<body>
-  <h1>Welcome to Commonplace (Developer Preview)</h1>
-  <p>This is the deployment prepared for Yuting at 10:00 UTC.</p>
-  <h2>Live Module Links</h2>
-  <ul>
-    <li><a href="chonger.html">Chonger Chinese</a></li>
-    <li><a href="diagnostic.html">Diagnostic Entry</a></li>
-    <li><a href="lab.html">Language Lab</a></li>
-    <li><a href="shadowbank.html">Shadowbank</a></li>
-    <li><a href="encounters.html">Encounters</a></li>
-  </ul>
-  <h2>Deployment Tracker</h2>
-  <p>UTC: Target 10:00 — Now: LIVE<br>Taiwan CST: Target 18:00 — Now: LIVE</p>
+<body data-theme="light">
+  <div class="container">
+    <div class="header">
+      <h1>Welcome to Commonplace</h1>
+      <button class="mode-toggle" onclick="toggleMode()">Toggle Mode</button>
+    </div>
+
+    <div class="cards">
+      <div class="card" onclick="goTo('chonger')">
+        <h3>🧠 Chonger Chinese<br/><small>中文冲格</small></h3>
+        <p>Sentence input + i+1 feedback</p>
+      </div>
+
+      <div class="card" onclick="goTo('diagnostic')">
+        <h3>🔍 Diagnostic Entry<br/><small>能力診斷</small></h3>
+        <p>Unlocks level-based modules</p>
+      </div>
+
+      <div class="card" onclick="goTo('lab')">
+        <h3>🧪 Language Lab<br/><small>語言實驗室</small></h3>
+        <p>Morphology, sentence explorer</p>
+      </div>
+
+      <div class="card" onclick="goTo('shadowbank')">
+        <h3>🎤 Shadowbank<br/><small>語音模仿庫</small></h3>
+        <p>Speaking + recording module</p>
+      </div>
+
+      <div class="card" onclick="goTo('encounters')">
+        <h3>🌏 Encounters<br/><small>文化探索</small></h3>
+        <p>Maps, media, cultural immersion</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMode() {
+      const body = document.body;
+      const current = body.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      body.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    }
+
+    function goTo(module) {
+      alert("This would route to the " + module + " module.");
+    }
+
+    (function loadMode() {
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        document.body.setAttribute("data-theme", saved);
+      }
+    })();
+  </script>
 </body>
 </html>
